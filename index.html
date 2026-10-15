@@ -14,8 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=4">
+    <script src="supabase-config.js?v=2" defer></script>
+    <script src="script.js?v=4" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -34,6 +35,7 @@
         <nav class="site-nav" id="site-navigation" aria-label="Navegación principal">
           <a href="#servicios">Servicios</a>
           <a href="#portafolio">Portafolio</a>
+          <a href="#reseñas">Reseñas</a>
           <a href="#nosotros">Nosotros</a>
           <a href="#contacto">Contacto</a>
           <a class="button button-small button-outline nav-cta" href="#contacto">Cotiza ahora <span aria-hidden="true">↗</span></a>
@@ -185,6 +187,74 @@
             </article>
           </div>
           <p class="portfolio-note">Los diseños mostrados son demostraciones conceptuales.</p>
+        </div>
+      </section>
+
+      <section class="reviews section-pad" id="reseñas">
+        <div class="container">
+          <div class="section-heading reviews-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Tu opinión cuenta</p>
+              <h2>Experiencias reales,<br><span>conexiones que crecen.</span></h2>
+            </div>
+            <p class="section-lead">¿Trabajamos juntos? Comparte tu experiencia y ayuda a otros negocios a dar el siguiente paso.</p>
+          </div>
+
+          <div class="review-highlights">
+            <article class="review-summary">
+              <span class="review-highlight-label">Lo que dicen nuestros clientes</span>
+              <div class="review-rating"><strong id="reviews-average">—</strong><span class="review-stars" role="img" aria-label="Aún no hay calificaciones"><span id="reviews-stars-filled"></span><span class="review-stars-empty" id="reviews-stars-empty">☆☆☆☆☆</span></span></div>
+              <p id="reviews-count">Cargando opiniones...</p>
+            </article>
+            <article class="review-like-card">
+              <span class="review-heart" aria-hidden="true">♡</span>
+              <div class="review-like-copy"><strong>¿Te gusta nuestra web?</strong><span>Déjanos un “me gusta”.</span></div>
+              <button class="like-button" id="site-like-button" type="button" aria-label="Me gusta esta página" aria-pressed="false" disabled>
+                <span aria-hidden="true">♥</span><span id="site-like-count">—</span>
+              </button>
+              <p class="like-status" id="site-like-status" role="status" aria-live="polite"></p>
+            </article>
+          </div>
+
+          <p class="reviews-service-status" id="reviews-service-status" role="status" aria-live="polite"></p>
+          <div class="review-list" id="reviews-list" aria-live="polite" aria-label="Reseñas de clientes"></div>
+          <p class="review-empty" id="reviews-empty" hidden>Todavía no hay reseñas. ¡Nos encantará conocer tu experiencia!</p>
+
+          <form class="review-form" id="review-form">
+            <div class="review-form-heading">
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Comparte tu experiencia</p>
+              <h3>¿Qué te pareció nuestro servicio?</h3>
+              <p>Tu opinión ayuda a otros negocios a conocernos.</p>
+            </div>
+            <fieldset class="review-fields" id="review-fields" disabled>
+              <div class="review-form-grid">
+                <div class="review-field">
+                  <label for="review-name">Tu nombre</label>
+                  <input id="review-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" placeholder="¿Cómo te llamas?" required>
+                </div>
+                <fieldset class="rating-field">
+                  <legend>Califica tu experiencia</legend>
+                  <div class="rating-options">
+                    <input id="rating-1" name="rating" type="radio" value="1" required><label for="rating-1" aria-label="1 de 5 estrellas">★</label>
+                    <input id="rating-2" name="rating" type="radio" value="2"><label for="rating-2" aria-label="2 de 5 estrellas">★</label>
+                    <input id="rating-3" name="rating" type="radio" value="3"><label for="rating-3" aria-label="3 de 5 estrellas">★</label>
+                    <input id="rating-4" name="rating" type="radio" value="4"><label for="rating-4" aria-label="4 de 5 estrellas">★</label>
+                    <input id="rating-5" name="rating" type="radio" value="5"><label for="rating-5" aria-label="5 de 5 estrellas">★</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="review-field">
+                <label for="review-comment">Tu comentario</label>
+                <textarea id="review-comment" name="comment" rows="4" minlength="10" maxlength="600" placeholder="Cuéntanos cómo fue tu experiencia (10 a 600 caracteres)." required></textarea>
+              </div>
+              <label class="review-consent" for="review-consent">
+                <input id="review-consent" name="consent" type="checkbox" required>
+                <span>Acepto que mi nombre, calificación y comentario se publiquen en este sitio.</span>
+              </label>
+              <button class="button button-primary review-submit" id="review-submit" type="submit" disabled>Publicar mi reseña <span aria-hidden="true">↗</span></button>
+            </fieldset>
+            <p class="review-form-status" id="review-form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
 
