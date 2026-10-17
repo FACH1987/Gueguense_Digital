@@ -30,8 +30,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-header { position: sticky; z-index: 10; top: 0; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(231,235,242,.86); backdrop-filter: blur(14px); }
 .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.brand-mark { width: 39px; height: 39px; display: grid; place-items: center; color: white; background: var(--navy); border-radius: 12px; font: 800 23px/1 var(--font-heading); letter-spacing: -2px; }
-.brand-mark span { color: #4b82ff; }
+.brand-mark { width: 43px; height: 43px; display: block; flex: 0 0 43px; object-fit: contain; }
 .brand-name { display: flex; flex-direction: column; color: var(--navy); font: 800 14px/1.05 var(--font-heading); letter-spacing: -.55px; }
 .brand-name span { margin-top: 4px; color: #7a8699; font: 600 10px/1 var(--font-body); letter-spacing: 1.65px; text-transform: uppercase; }
 .site-nav { display: flex; align-items: center; gap: 34px; color: #536076; font-size: 13px; font-weight: 600; }
@@ -298,8 +297,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
 .about-orbit { position: absolute; width: 76%; aspect-ratio: 1; border: 1px solid rgba(40,100,240,.17); border-radius: 50%; }
 .about-orbit::before, .about-orbit::after { position: absolute; inset: 14%; border: 1px solid rgba(40,100,240,.14); border-radius: 50%; content: ""; }
 .about-orbit::after { inset: 29%; border-color: rgba(40,100,240,.12); }
-.about-monogram { position: relative; z-index: 1; color: #123a85; font: 800 clamp(125px, 18vw, 207px)/1 var(--font-heading); letter-spacing: -17px; }
-.about-monogram span { color: var(--blue); }
+.about-logo { position: relative; z-index: 1; width: min(80%, 300px); height: auto; transform: translateY(-10px); }
 .about-stamp { position: absolute; right: 19px; bottom: 21px; min-width: 136px; padding: 13px 15px; color: white; background: var(--navy); border-radius: 4px; }
 .about-stamp span { display: block; color: #a9c1ff; font-size: 7px; letter-spacing: 1.2px; }
 .about-stamp b { display: block; margin-top: 4px; font: 700 13px/1.3 var(--font-heading); letter-spacing: .4px; }
@@ -352,7 +350,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
 .closing-inner > a:hover { color: var(--blue); background: white; }
 .site-footer { color: #a3aec0; background: #061634; }
 .footer-inner { min-height: 92px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand-footer .brand-mark { color: var(--navy); background: white; }
+.brand-footer .brand-mark { background: transparent; }
 .brand-footer .brand-name { color: white; }
 .brand-footer .brand-name span { color: #9baac2; }
 .footer-inner > p { margin: 0; font-size: 9px; }
@@ -392,7 +390,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
   .container { width: calc(100% - 40px); }
   .section-pad { padding: 76px 0; }
   .header-inner { min-height: 68px; }
-  .brand-mark { width: 35px; height: 35px; font-size: 21px; }
+  .brand-mark { width: 38px; height: 38px; flex-basis: 38px; }
   .menu-toggle { width: 42px; height: 42px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); border-radius: 6px; background: white; cursor: pointer; }
   .menu-toggle span { width: 17px; height: 1.5px; background: var(--navy); transition: transform .2s ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.75px) rotate(45deg); }
@@ -442,7 +440,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
   .rating-options label { width: 42px; min-height: 42px; display: grid; place-items: center; font-size: 32px; }
   .about-layout { grid-template-columns: 1fr; gap: 42px; }
   .about-visual { width: min(100%, 420px); margin: 0 auto; }
-  .about-monogram { font-size: clamp(150px, 40vw, 200px); }
+  .about-logo { width: min(80%, 300px); }
   .about-copy { max-width: 570px; }
   .about-description { font-size: 12px; }
   .contact-layout { grid-template-columns: 1fr; gap: 32px; }
