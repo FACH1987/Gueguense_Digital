@@ -208,6 +208,19 @@ h1, h2, h3 { font-family: var(--font-heading); }
 .food-art > b { top: 57px; right: 39px; transform: rotate(-28deg); background: #557947; }
 .food-bottom { display: flex; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(77,53,37,.16); color: #755c43; font-size: 5px; }
 .food-bottom span:first-child { color: #b36a24; font-weight: 700; }
+.preview-logistics { padding: 18px; color: #19364a; background: #e8f0ef; }
+.logistics-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.logistics-top b { font: 800 13px var(--font-heading); }
+.logistics-top b span { color: #df8754; }
+.logistics-top > span { color: #59727b; font-size: 5px; letter-spacing: .4px; }
+.logistics-top i { padding: 4px 6px; border: 1px solid #63848a; font-size: 5px; font-style: normal; }
+.logistics-showcase { position: relative; min-height: 137px; display: flex; align-items: center; justify-content: space-between; gap: 3px; margin-top: 8px; }
+.logistics-copy { position: relative; z-index: 1; display: flex; flex: 0 0 48%; flex-direction: column; align-items: flex-start; gap: 8px; }
+.logistics-copy small { color: #527a7e; font-size: 5px; letter-spacing: .5px; }
+.logistics-copy strong { font: 700 15px/1.2 var(--font-heading); letter-spacing: -.45px; }
+.logistics-map { width: 57%; height: 112px; flex: 0 0 57%; margin-right: -8px; overflow: visible; }
+.logistics-bottom { display: flex; justify-content: space-between; gap: 4px; padding-top: 8px; border-top: 1px solid rgba(25,54,74,.15); color: #59727b; font-size: 5px; }
+.logistics-bottom b { margin-right: 3px; color: #df8754; font-size: 6px; }
 .project-info { display: flex; align-items: center; justify-content: space-between; padding-top: 15px; }
 .project-type { color: #9eafcc; font-size: 9px; }
 .project-info h3 { margin: 3px 0 0; font-size: 14px; font-weight: 600; }
@@ -371,6 +384,8 @@ h1, h2, h3 { font-family: var(--font-heading); }
   .phones-tags, .textile-bottom, .food-bottom { margin-top: 8px; }
   .textile-art { height: 102px; }
   .food-art { width: 96px; height: 96px; flex-basis: 96px; }
+  .logistics-showcase { min-height: 112px; }
+  .logistics-map { height: 94px; }
 }
 @media (max-width: 720px) {
   html { scroll-padding-top: 71px; }
