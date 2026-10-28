@@ -138,7 +138,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
 .cafe-site { position: relative; padding: 12px 13px; color: #f8f1e4; background: #d8c7a2; }
 .preview-nav { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 4px; color: #3a2920; }
 .preview-nav b { font: 800 11px var(--font-heading); }
-.preview-nav b span, .shop-top b span { color: #c07542; }
+.preview-nav b span { color: #c07542; }
 .preview-nav > span { font-size: 5px; }
 .preview-nav i { padding: 4px 5px; color: white; background: #75533a; border-radius: 2px; font-size: 5px; font-style: normal; }
 .cafe-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 9px; margin-top: 32px; }
@@ -148,17 +148,22 @@ h1, h2, h3 { font-family: var(--font-heading); }
 .cafe-content > span b { margin-left: 8px; }
 .coffee-art { position: absolute; right: 6px; bottom: -31px; width: 52%; height: 149px; display: grid; place-items: center; transform: rotate(-9deg); background: radial-gradient(ellipse at center, #8e6039 0 28%, #e7d9c1 29% 39%, #f1e9db 40% 50%, transparent 51%); border-radius: 50%; }
 .coffee-art > span { transform: translate(2px, -7px); font-size: 41px; filter: saturate(.65); }
-.preview-shop { padding: 18px; color: #484638; background: #f0ecdf; }
-.shop-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
-.shop-top b { font: 800 13px var(--font-heading); }
-.shop-top > span { font-size: 6px; }
-.shop-top i { padding: 4px 6px; border: 1px solid #887d69; font-size: 5px; font-style: normal; }
-.shop-product { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 17px; }
-.beauty-products { width: 104px; height: 136px; flex: 0 0 104px; overflow: visible; filter: drop-shadow(3px 6px 5px rgba(73,66,48,.12)); }
-.product-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
-.product-copy small { color: #95735e; font-size: 5px; letter-spacing: .8px; }
-.product-copy b { font: 700 16px/1.2 var(--font-heading); letter-spacing: -.5px; }
-.product-copy > span { padding-bottom: 3px; border-bottom: 1px solid #ad9b7c; font-size: 5px; }
+.preview-warehouse { padding: 18px; color: #17324a; background: #eaf1f5; }
+.warehouse-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.warehouse-top b { color: #247b83; font: 800 13px var(--font-heading); }
+.warehouse-top > span { font-size: 5px; letter-spacing: .3px; }
+.warehouse-heading { display: flex; flex-direction: column; gap: 5px; margin-top: 16px; }
+.warehouse-heading small { color: #247b83; font-size: 5px; letter-spacing: .8px; }
+.warehouse-heading strong { font: 800 18px/1.15 var(--font-heading); letter-spacing: -.5px; }
+.warehouse-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 12px; }
+.warehouse-metrics > div { display: flex; flex-direction: column; gap: 4px; padding: 8px; border: 1px solid #d5e2e9; border-radius: 5px; background: #fff; }
+.warehouse-metrics b { font: 800 14px var(--font-heading); }
+.warehouse-metrics span { color: #526b7a; font-size: 5px; }
+.warehouse-flow { display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-top: 10px; font-size: 6px; }
+.warehouse-flow span { padding: 4px 7px; border-radius: 3px; background: #d4e7e8; }
+.warehouse-flow b { color: #247b83; }
+.warehouse-stock { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 9px; padding-top: 7px; border-top: 1px solid #cbdde6; font-size: 5px; }
+.warehouse-stock b { color: #247b83; font-weight: 600; }
 .preview-studio { position: relative; padding: 15px; color: #ece9e3; background: #242522; }
 .studio-top { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; font-size: 5px; }
 .studio-top > span:first-child { font-weight: 700; letter-spacing: 1px; }
@@ -496,8 +501,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
   .cafe-content { margin-top: 32px; }
   .cafe-content strong { font-size: 22px; }
   .coffee-art { right: 4px; width: 50%; }
-  .preview-shop, .preview-studio, .preview-phones, .preview-textile, .preview-food { padding: 19px; }
-  .beauty-products { width: 112px; height: 140px; flex-basis: 112px; }
+  .preview-warehouse, .preview-studio, .preview-phones, .preview-textile, .preview-food { padding: 19px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .contact-form { padding: 21px 18px; }
   .review-list { grid-template-columns: 1fr; }
