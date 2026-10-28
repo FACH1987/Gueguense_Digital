@@ -39,6 +39,18 @@ La primera versión no incluye moderación ni CAPTCHA. Si el sitio recibe spam, 
 
 GitHub Pages publicará el sitio estático en la dirección indicada en la configuración de Pages.
 
+## Indexación en buscadores
+
+El dominio principal es `https://gueguensedigital.com/`, configurado en `CNAME`, la URL canónica, los metadatos y `sitemap.xml`. Si cambias el dominio, actualiza también esas referencias y `robots.txt`.
+
+1. Publica `index.html`, `CNAME`, `robots.txt` y `sitemap.xml` con el resto del sitio en GitHub Pages.
+2. Comprueba que el dominio abra con HTTPS y que `/robots.txt` y `/sitemap.xml` respondan correctamente.
+3. En [Google Search Console](https://search.google.com/search-console/), añade la propiedad del dominio `gueguensedigital.com` y verifica la propiedad con el registro TXT que Google indique en tu proveedor DNS.
+4. En **Sitemaps**, envía `https://gueguensedigital.com/sitemap.xml`.
+5. En **Inspección de URLs**, inspecciona `https://gueguensedigital.com/` y pulsa **Solicitar indexación** si está disponible.
+
+La solicitud no garantiza la inclusión en Google. El rastreo puede tardar de días a semanas; consulta el estado en Search Console. Documentación: [solicitar un nuevo rastreo a Google](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=es).
+
 ## Personalización
 
 - Edita los textos, las secciones y los datos de contacto en `index.html`.
