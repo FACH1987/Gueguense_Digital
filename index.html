@@ -19,9 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
     <script src="supabase-config.js?v=2" defer></script>
-    <script src="script.js?v=4" defer></script>
+    <script src="script.js?v=5" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -79,34 +79,12 @@
             </div>
           </div>
 
-          <div class="hero-art" aria-label="Vista previa de un sitio web diseñado para negocios">
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="floating-label label-top"><span class="label-pulse"></span> Tu próxima gran idea</div>
-            <div class="browser-card">
-              <div class="browser-bar">
-                <span></span><span></span><span></span>
-                <div class="browser-address">tunegocio.com</div>
-              </div>
-              <div class="browser-content">
-                <div class="mock-nav"><span class="mock-logo"></span><span></span><span></span><span class="mock-nav-button"></span></div>
-                <div class="mock-hero">
-                  <div class="mock-copy">
-                    <span class="mock-kicker"></span>
-                    <span class="mock-title"></span>
-                    <span class="mock-title mock-title-short"></span>
-                    <span class="mock-description"></span>
-                    <span class="mock-description mock-description-short"></span>
-                    <span class="mock-button"></span>
-                  </div>
-                  <div class="mock-image"><span class="mock-sun"></span><span class="mock-hill hill-back"></span><span class="mock-hill hill-front"></span></div>
-                </div>
-                <div class="mock-bottom"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-            <div class="floating-label label-bottom"><span class="sparkle" aria-hidden="true">✦</span> Diseño que destaca</div>
-            <div class="art-accent accent-one"></div>
-            <div class="art-accent accent-two"></div>
+          <div class="hero-art hero-art-image">
+            <div class="orbit orbit-one" aria-hidden="true"></div>
+            <div class="orbit orbit-two" aria-hidden="true"></div>
+            <div class="hero-image-frame"><img src="assets/impulsa-tu-negocio.jpg" alt="Güegüense Digital: diseño web, tiendas online y presencia digital para tu negocio" width="1199" height="1312" fetchpriority="high"></div>
+            <div class="floating-label label-top"><span class="label-pulse"></span> Tu idea. Nuestro próximo proyecto.</div>
+            <a class="floating-label label-bottom" href="#inspiracion"><span class="sparkle" aria-hidden="true">&#10022;</span> Descubre lo que podemos crear &#8599;</a>
           </div>
         </div>
         <a class="scroll-cue" href="#servicios"><span></span> Desliza para descubrir</a>
@@ -167,6 +145,11 @@
           </div>
         </div>
       </section>
+
+<section class="inspiration section-pad" id="inspiracion" aria-labelledby="inspiration-title"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span>Ideas para tu negocio</p><h2 id="inspiration-title">Tu visión.<br><span>Un mundo de posibilidades.</span></h2></div><p class="section-lead">Una web que cuenta tu historia, una tienda que abre nuevas puertas y una marca que se hace sentir. Explora nuestras propuestas y encuentra inspiración para tu negocio.</p></div><div class="inspiration-grid"><article class="inspiration-card"><a class="image-expand" href="assets/siguiente-nivel.jpg" data-image-preview aria-label="Ampliar: Presencia que conecta"><img src="assets/siguiente-nivel.jpg" alt="Diseño web y tiendas online: propuesta visual de Güegüense Digital" loading="lazy" decoding="async"><span class="image-expand-hint">Ver imagen &#8599;</span></a><div class="inspiration-caption"><span class="inspiration-index">01</span><div><p>Diseño web y tiendas online</p><h3>Presencia que conecta</h3></div></div></article>
+<article class="inspiration-card"><a class="image-expand" href="assets/diseno-web.jpg" data-image-preview aria-label="Ampliar: Tu negocio, siempre abierto"><img src="assets/diseno-web.jpg" alt="Páginas web y experiencia móvil: propuesta visual de Güegüense Digital" loading="lazy" decoding="async"><span class="image-expand-hint">Ver imagen &#8599;</span></a><div class="inspiration-caption"><span class="inspiration-index">02</span><div><p>Páginas web y experiencia móvil</p><h3>Tu negocio, siempre abierto</h3></div></div></article>
+<article class="inspiration-card"><a class="image-expand" href="assets/soluciones-digitales.jpg" data-image-preview aria-label="Ampliar: Todo empieza con una idea"><img src="assets/soluciones-digitales.jpg" alt="Servicios digitales para tu negocio: propuesta visual de Güegüense Digital" loading="lazy" decoding="async"><span class="image-expand-hint">Ver imagen &#8599;</span></a><div class="inspiration-caption"><span class="inspiration-index">03</span><div><p>Servicios digitales para tu negocio</p><h3>Todo empieza con una idea</h3></div></div></article>
+<article class="inspiration-card"><a class="image-expand" href="assets/logistica-digital.jpg" data-image-preview aria-label="Ampliar: Tu negocio, conectado"><img src="assets/logistica-digital.jpg" alt="Almacén, logística y ventas: propuesta visual de Güegüense Digital" loading="lazy" decoding="async"><span class="image-expand-hint">Ver imagen &#8599;</span></a><div class="inspiration-caption"><span class="inspiration-index">04</span><div><p>Almacén, logística y ventas</p><h3>Tu negocio, conectado</h3></div></div></article></div><div class="inspiration-cta"><p>¿Te imaginas algo así para tu negocio?</p><a class="text-link" href="#contacto">Hagámoslo realidad &#8599;</a></div></div></section>
 
       <section class="portfolio section-pad" id="portafolio">
         <div class="container">
@@ -395,6 +378,7 @@
       </section>
     </main>
 
+    <dialog class="image-dialog" aria-label="Vista ampliada de la imagen"><button class="image-dialog-close" type="button" aria-label="Cerrar imagen">&#10005;</button><img alt=""><p class="image-dialog-caption"></p></dialog>
     <footer class="site-footer">
       <div class="container footer-inner">
         <a class="brand brand-footer" href="#inicio" aria-label="Güegüense Digital, volver al inicio">

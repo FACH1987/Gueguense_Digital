@@ -432,3 +432,29 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
     revealObserver.observe(target);
   });
 }
+
+// Los enlaces conservan acceso a la imagen si el navegador no admite dialog.
+const imageDialog = document.querySelector('.image-dialog');
+if (imageDialog && typeof imageDialog.showModal === 'function') {
+  const previewImage = imageDialog.querySelector('img');
+  const previewCaption = imageDialog.querySelector('.image-dialog-caption');
+  document.querySelectorAll('[data-image-preview]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const image = link.querySelector('img');
+      previewImage.src = link.href;
+      previewImage.alt = image.alt;
+      previewCaption.textContent = link.closest('article').querySelector('h3').textContent;
+      imageDialog.showModal();
+      document.body.classList.add('image-preview-open');
+    });
+  });
+  imageDialog.querySelector('button').addEventListener('click', () => imageDialog.close());
+  imageDialog.addEventListener('click', (event) => {
+    if (event.target !== imageDialog) return;
+    const bounds = imageDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) imageDialog.close();
+  });
+  imageDialog.addEventListener('close', () => document.body.classList.remove('image-preview-open'));
+}
