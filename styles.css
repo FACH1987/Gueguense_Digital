@@ -663,3 +663,45 @@ body.image-preview-open { overflow: hidden; }
 .reviews .like-button[aria-pressed="true"] > span:first-child { color: #172b13; }
 .reviews .review-consent input { accent-color: #587523; }
 .reviews .like-button:focus-visible, .reviews .review-submit:focus-visible, .contact .button:focus-visible { outline: 3px solid #c2e44a; outline-offset: 3px; }
+
+/* Ajustes para tabletas y telefonos; la paleta se comparte con escritorio. */
+@media (min-width: 721px) and (max-width: 1000px) {
+  .menu-toggle { width: 42px; height: 42px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); border-radius: 6px; background: white; cursor: pointer; }
+  .menu-toggle span { width: 17px; height: 1.5px; background: var(--navy); transition: transform .2s ease; }
+  .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.75px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+  .site-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 20px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 14px 20px rgba(12,28,60,.08); }
+  .site-nav.is-open { display: flex; flex-direction: column; }
+  .site-nav > a:not(.button) { padding: 12px 0; border-bottom: 1px solid #eff1f5; }
+  .site-nav .nav-cta { align-self: flex-start; margin-top: 15px; }
+
+ .site-nav { top: 75px; }
+ .service-grid, .portfolio-grid, .review-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .project-large { grid-column: span 2; }
+ .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 36px; }
+ .about-visual { max-width: 420px; justify-self: center; }
+ .about-copy, .contact-copy, .contact-form { width: 100%; max-width: 760px; }
+ .review-highlights { grid-template-columns: 1fr; }
+ .section-heading { align-items: flex-start; gap: 24px; }
+ .section-heading > div, .section-lead { flex: 1; min-width: 0; }
+}
+:is(.services, .portfolio, .reviews, .about, .contact) .container > *, .service-card, .about-copy, .contact-copy { min-width: 0; }
+.contact-detail > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+ .service-card p, .about-description { font-size: 14px; }
+ .service-card > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
+ .value-item p { font-size: 13px; }
+ .review-field input, .review-field textarea, .form-field input, .form-field select, .form-field textarea { font-size: 16px; }
+ .site-nav { max-height: calc(100dvh - 76px); overflow-y: auto; }
+ .site-nav > a:not(.button) { min-height: 44px; }
+}
+@media (max-width: 600px) {
+ .service-grid, .portfolio-grid, .review-list { grid-template-columns: minmax(0, 1fr); }
+ .project-large { grid-column: auto; }
+ .section-pad { padding: 56px 0; }
+ .section-lead, .review-card-comment, .review-consent, .reviews-service-status { font-size: 13px; }
+ .review-like-copy { min-width: 0; }
+ .review-like-card { flex-wrap: wrap; padding-bottom: 32px; }
+ .review-like-copy > strong { font-size: 14px; }
+ .contact h2 { font-size: clamp(32px, 8vw, 48px); }
+}
