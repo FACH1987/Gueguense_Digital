@@ -583,3 +583,11 @@ body.image-preview-open { overflow: hidden; }
  .footer-about, .footer-contact { grid-column: 1 / -1; }
  .footer-bottom { flex-direction: column; gap: 12px; }
 }
+
+.footer-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.footer-whatsapp { color: #fff; background: #128048; }
+.footer-whatsapp:hover { color: #fff; background: #0e683a; }
+.footer-email { color: #fff; background: #18325c; border-color: #6581ad; }
+.footer-email:hover { color: #fff; background: #244778; }
+.footer-actions a:focus-visible { outline: 3px solid #a9c5ff; outline-offset: 4px; }
+@media (max-width: 600px) { .footer-actions { width: 100%; } .footer-actions .button { flex: 1 1 150px; } }
