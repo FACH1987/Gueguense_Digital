@@ -458,3 +458,41 @@ if (imageDialog && typeof imageDialog.showModal === 'function') {
   });
   imageDialog.addEventListener('close', () => document.body.classList.remove('image-preview-open'));
 }
+
+// Navegación entre vistas con enlaces directos e historial del navegador.
+(() => {
+  const main = document.querySelector('#contenido');
+  if (!main) return;
+  const sections = Array.from(main.children).filter(node => node.tagName === 'SECTION');
+  const titles = { inicio: 'Tu negocio merece presencia digital', servicios: 'Servicios', portafolio: 'Portafolio', 'reseñas': 'Reseñas', nosotros: 'Nosotros', contacto: 'Contacto', inspiracion: 'Ideas para tu negocio' };
+  const routeFromHash = hash => { try { return decodeURIComponent(hash.slice(1)) || 'inicio'; } catch { return 'inicio'; } };
+  const render = (focus = false) => {
+    const requested = routeFromHash(location.hash);
+    const route = Object.hasOwn(titles, requested) ? requested : 'inicio';
+    sections.forEach(section => {
+      section.hidden = !(route === 'inicio' ? section.classList.contains('hero') || section.classList.contains('closing') : section.id === route || (route === 'portafolio' && section.id === 'inspiracion'));
+    });
+    document.querySelectorAll('.site-nav a, .footer-column a').forEach(link => {
+      if (routeFromHash(link.hash) === route) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    document.title = titles[route] + ' | Güegüense Digital';
+    main.dataset.view = route;
+    if (focus) {
+      const heading = sections.find(section => !section.hidden)?.querySelector('h1, h2');
+      if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }); }
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  };
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!Object.hasOwn(titles, routeFromHash(link.hash))) return;
+    event.preventDefault();
+    if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+    render(true);
+  });
+  window.addEventListener('popstate', () => render(true));
+  window.addEventListener('hashchange', () => render(true));
+  render();
+})();

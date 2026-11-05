@@ -19,9 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css?v=7">
     <script src="supabase-config.js?v=2" defer></script>
-    <script src="script.js?v=5" defer></script>
+    <script src="script.js?v=6" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -51,6 +51,7 @@
         </button>
 
         <nav class="site-nav" id="site-navigation" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
           <a href="#servicios">Servicios</a>
           <a href="#portafolio">Portafolio</a>
           <a href="#reseñas">Reseñas</a>
@@ -87,7 +88,7 @@
             <a class="floating-label label-bottom" href="#inspiracion"><span class="sparkle" aria-hidden="true">&#10022;</span> Descubre lo que podemos crear &#8599;</a>
           </div>
         </div>
-        <a class="scroll-cue" href="#servicios"><span></span> Desliza para descubrir</a>
+        <a class="scroll-cue" href="#servicios"><span></span> Explora nuestros servicios</a>
       </section>
 
       <section class="services section-pad" id="servicios">
@@ -380,15 +381,17 @@
 
     <dialog class="image-dialog" aria-label="Vista ampliada de la imagen"><button class="image-dialog-close" type="button" aria-label="Cerrar imagen">&#10005;</button><img alt=""><p class="image-dialog-caption"></p></dialog>
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <a class="brand brand-footer" href="#inicio" aria-label="Güegüense Digital, volver al inicio">
+      <div class="container footer-top"><div><p class="footer-kicker">Demos el siguiente paso</p><h2>Tu idea merece<br>una gran presencia digital.</h2></div><a class="button button-primary" href="#contacto">Hablemos de tu proyecto &#8599;</a></div>
+      <div class="container footer-grid">
+        <div class="footer-about">        <a class="brand brand-footer" href="#inicio" aria-label="Güegüense Digital, volver al inicio">
           <img class="brand-mark" src="brand-emblem.png" alt="" aria-hidden="true">
           <span class="brand-name">Güegüense<span>Digital</span></span>
-        </a>
-        <p>Ideas claras. Diseño memorable. Resultados digitales.</p>
-        <div class="footer-links"><a href="mailto:gueguense09@gmail.com">Correo</a><a href="https://wa.me/14085049624" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
-        <span class="copyright">© <span id="year">2026</span> Güegüense Digital</span>
+        </a><p>Transformamos tus ideas en páginas web, tiendas online y soluciones digitales que conectan tu negocio con sus clientes.</p><span>Ideas claras. Diseño memorable.</span></div>
+        <nav class="footer-column" aria-label="Explora el sitio"><h3>Explora</h3><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#reseñas">Reseñas</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+        <div class="footer-column"><h3>Soluciones digitales</h3><a href="#servicios">Diseño web</a><a href="#servicios">Tiendas online</a><a href="#servicios">Posicionamiento SEO</a><a href="#servicios">Integración con WhatsApp</a><a href="#servicios">Rediseño web</a><a href="#servicios">Mantenimiento web</a></div>
+        <div class="footer-column footer-contact"><h3>Conversemos</h3><span>Cuéntanos qué quieres crear.</span><a href="mailto:gueguense09@gmail.com">gueguense09@gmail.com &#8599;</a><a href="https://wa.me/14085049624" target="_blank" rel="noopener noreferrer">WhatsApp: +1 408 504 9624 &#8599;</a><a href="#contacto">Solicita una cotización &#8594;</a></div>
       </div>
+      <div class="container footer-bottom"><span>&copy; <span id="year">2026</span> Güegüense Digital. Todos los derechos reservados.</span><a href="#inicio">Volver al inicio &#8593;</a></div>
     </footer>
   </body>
 </html>

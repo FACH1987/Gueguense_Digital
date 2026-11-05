@@ -560,3 +560,26 @@ body.image-preview-open { overflow: hidden; }
 @media (max-width: 760px) { .hero-art-image { height: auto; min-height: 400px; padding: 36px 0; margin-top: 15px; } .hero-image-frame { width: min(330px,80%); } .hero-art-image .label-top { top: 14px; right: 0; } .hero-art-image .label-bottom { bottom: 18px; left: 0; } .inspiration-grid { gap: 25px 18px; } .inspiration-caption h3 { font-size: 16px; } .inspiration-index { display: none; } .image-expand { padding: 10px; } .image-expand-hint { right: 14px; bottom: 14px; padding: 6px 10px; font-size: 10px; } }
 @media (max-width: 540px) { .inspiration-grid { grid-template-columns: 1fr; gap: 30px; } .inspiration-cta { align-items: flex-start; flex-direction: column; } .inspiration-caption h3 { font-size: 19px; } }
 @media (prefers-reduced-motion: reduce) { .hero-image-frame { animation: none; } }
+
+/* Vistas independientes y pie compartido. */
+[hidden] { display: none !important; }
+#contenido { min-height: 55vh; }
+.site-nav > a[aria-current="page"]:not(.button) { color: var(--blue); box-shadow: 0 2px 0 var(--blue); }
+.footer-top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-top: 64px; padding-bottom: 48px; border-bottom: 1px solid #233451; }
+.footer-kicker { margin-bottom: 12px; color: #91b3ff; font-size: 11px; text-transform: uppercase; letter-spacing: 1.8px; }
+.footer-top h2 { margin: 0; color: white; font-size: clamp(28px, 3.5vw, 42px); line-height: 1.25; letter-spacing: -1.5px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr .7fr 1fr 1.2fr; gap: 40px; padding-top: 48px; padding-bottom: 48px; }
+.footer-about p { max-width: 300px; margin: 22px 0 16px; font-size: 13px; line-height: 1.9; }
+.footer-about > span { color: #90b0f2; font-size: 11px; }
+.footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-size: 12px; }
+.footer-column h3 { margin: 0 0 10px; color: white; font-size: 13px; }
+.footer-column a { overflow-wrap: anywhere; }
+.footer-column a:hover, .footer-bottom a:hover, .footer-column a[aria-current="page"] { color: #a9c5ff; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding-top: 22px; padding-bottom: 22px; border-top: 1px solid #233451; font-size: 11px; }
+@media (max-width: 1100px) { .site-nav { gap: 18px; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+ .footer-top { flex-direction: column; align-items: flex-start; padding-top: 40px; padding-bottom: 32px; }
+ .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; padding-top: 32px; padding-bottom: 32px; }
+ .footer-about, .footer-contact { grid-column: 1 / -1; }
+ .footer-bottom { flex-direction: column; gap: 12px; }
+}
