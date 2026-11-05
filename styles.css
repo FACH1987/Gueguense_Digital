@@ -593,3 +593,17 @@ body.image-preview-open { overflow: hidden; }
 .footer-email:hover { color: #fff; background: #244778; }
 .footer-actions a:focus-visible { outline: 3px solid #a9c5ff; outline-offset: 4px; }
 @media (max-width: 600px) { .footer-actions { width: 100%; } }
+
+/* Fondo azul para la vista de servicios. */
+.services { color: #fff; background: radial-gradient(ellipse at 90% 0%, #2458a8 0%, transparent 55%), linear-gradient(135deg, #081b42, #12376d); }
+.services .eyebrow, .services .section-heading h2 span { color: #a9c9ff; }
+.services .eyebrow-dot { background: #a9c9ff; box-shadow: 0 0 0 4px rgba(169,201,255,.15); }
+.services .section-lead { color: #c6d6ef; }
+.services .service-card { background: #153969; border-color: #3d5e89; }
+.services .service-card:hover { background: #1b4479; box-shadow: 0 15px 35px rgba(0,0,0,.18); }
+.services .service-card p { color: #d0ddf1; }
+.services .service-number { color: #a5bfe5; }
+.services .service-card > a { color: #b7d1ff; }
+.services .service-icon { color: #c4daff; background: #254e83; }
+.services .service-card:hover .service-icon { color: #fff; background: #2864f0; }
+.services .service-card > a:focus-visible { outline: 2px solid #b7d1ff; outline-offset: 5px; }
