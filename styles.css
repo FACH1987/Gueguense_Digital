@@ -594,16 +594,72 @@ body.image-preview-open { overflow: hidden; }
 .footer-actions a:focus-visible { outline: 3px solid #a9c5ff; outline-offset: 4px; }
 @media (max-width: 600px) { .footer-actions { width: 100%; } }
 
-/* Fondo azul para la vista de servicios. */
-.services { color: #fff; background: radial-gradient(ellipse at 90% 0%, #2458a8 0%, transparent 55%), linear-gradient(135deg, #081b42, #12376d); }
-.services .eyebrow, .services .section-heading h2 span { color: #a9c9ff; }
-.services .eyebrow-dot { background: #a9c9ff; box-shadow: 0 0 0 4px rgba(169,201,255,.15); }
-.services .section-lead { color: #c6d6ef; }
-.services .service-card { background: #153969; border-color: #3d5e89; }
-.services .service-card:hover { background: #1b4479; box-shadow: 0 15px 35px rgba(0,0,0,.18); }
-.services .service-card p { color: #d0ddf1; }
-.services .service-number { color: #a5bfe5; }
-.services .service-card > a { color: #b7d1ff; }
-.services .service-icon { color: #c4daff; background: #254e83; }
-.services .service-card:hover .service-icon { color: #fff; background: #2864f0; }
-.services .service-card > a:focus-visible { outline: 2px solid #b7d1ff; outline-offset: 5px; }
+/* Paleta verde para Servicios. */
+.services { color: #fff; background: radial-gradient(ellipse at 90% 0%, #526c1b 0%, transparent 55%), linear-gradient(135deg, #172b13, #2d4818); }
+.services .eyebrow, .services .section-heading h2 span { color: #c2e44a; }
+.services .eyebrow-dot { background: #c2e44a; box-shadow: 0 0 0 4px rgba(178,213,43,.15); }
+.services .section-lead { color: #d6e3c5; }
+.services .service-card { background: #29451e; border-color: #627d43; }
+.services .service-card:hover { background: #365826; box-shadow: 0 15px 35px rgba(0,0,0,.18); }
+.services .service-card p { color: #d6e3c5; }
+.services .service-number { color: #c5d7af; }
+.services .service-card > a { color: #c2e44a; }
+.services .service-icon { color: #d4eb99; background: #405f27; }
+.services .service-card:hover .service-icon { color: #fff; background: #587523; }
+.services .service-card > a:focus-visible { outline: 2px solid #c2e44a; outline-offset: 5px; }
+
+/* Nosotros: paleta verde compartida. */
+.about { color: #fff; background: radial-gradient(ellipse at 90% 0%, #526c1b 0%, transparent 55%), linear-gradient(135deg, #172b13, #2d4818); }
+.about .eyebrow, .about h2 span { color: #c2e44a; }
+.about .eyebrow-dot { background: #c2e44a; box-shadow: 0 0 0 4px rgba(178,213,43,.15); }
+.about .about-description, .about .value-item p { color: #d6e3c5; }
+.about .value-item { border-color: #627d43; }
+.about .value-icon { color: #d4eb99; background: #405f27; }
+.about .about-visual { background: linear-gradient(145deg, #365826, #29451e); border: 1px solid #627d43; }
+.about .about-orbit, .about .about-orbit::before, .about .about-orbit::after { border-color: rgba(178,213,43,.22); }
+.about .about-spark { color: #c2e44a; }
+
+/* Resenas: fondo y superficies verdes. */
+.reviews { color: #fff; background: radial-gradient(ellipse at 90% 0%, #526c1b 0%, transparent 55%), linear-gradient(135deg, #172b13, #2d4818); }
+.reviews .eyebrow, .reviews .reviews-heading h2 span { color: #c2e44a; }
+.reviews .eyebrow-dot { background: #c2e44a; box-shadow: 0 0 0 4px rgba(178,213,43,.15); }
+.reviews .section-lead, .reviews .review-highlight-label, .reviews .review-summary > p, .reviews .review-like-copy > span, .reviews .like-status, .reviews .reviews-service-status, .reviews .review-card-comment, .reviews .review-form-heading > p:last-child, .reviews .review-consent { color: #d6e3c5; }
+.reviews .review-summary, .reviews .review-like-card, .reviews .review-card, .reviews .review-empty, .reviews .review-form { background: #29451e; border-color: #627d43; }
+.reviews .review-rating > strong, .reviews .review-like-copy > strong, .reviews .review-card-author strong, .reviews .review-form-heading h3, .reviews .review-field label, .reviews .rating-field legend { color: #fff; }
+.reviews .review-empty, .reviews .review-card-date { color: #d6e3c5; }
+.reviews .review-card-author { border-color: #627d43; }
+.reviews .review-heart, .reviews .review-avatar { color: #d4eb99; background: #405f27; border-color: #627d43; }
+.reviews .review-field input, .reviews .review-field textarea, .reviews .review-fields:disabled .review-field input, .reviews .review-fields:disabled .review-field textarea { color: #fff; background: #1b3215; border-color: #829c5f; }
+.reviews .review-field input::placeholder, .reviews .review-field textarea::placeholder { color: #bdcdaa; }
+.reviews .review-field input:focus, .reviews .review-field textarea:focus { border-color: #c2e44a; box-shadow: 0 0 0 3px rgba(178,213,43,.2); }
+.reviews .review-form-status { color: #d4eb99; }
+.reviews .rating-options input:focus-visible + label { outline-color: #c2e44a; }
+
+/* Portafolio: verdes inspirados en los volcanes del logotipo. */
+.portfolio { color: #fff; background: radial-gradient(ellipse at 90% 0%, #526c1b 0%, transparent 55%), linear-gradient(135deg, #172b13, #2d4818); }
+.portfolio .eyebrow, .portfolio .portfolio-heading h2 span { color: #c2e44a; }
+.portfolio .eyebrow-dot { background: #b2d52b; box-shadow: 0 0 0 4px rgba(178,213,43,.18); }
+.portfolio .section-lead { color: #d6e3c5; }
+.portfolio .project-type, .portfolio .portfolio-note { color: #c5d7af; }
+.portfolio .project-arrow { color: #c2e44a; border-color: #718b4e; background: rgba(178,213,43,.08); }
+.inspiration { background: #f3f7e9; }
+.inspiration .eyebrow, .inspiration .section-heading h2 span, .inspiration .text-link { color: #4c681a; }
+.inspiration .eyebrow-dot { background: #7eaa20; box-shadow: 0 0 0 4px rgba(126,170,32,.14); }
+
+/* Contacto: paleta verde compartida con Portafolio. */
+.contact { background: radial-gradient(ellipse at 90% 0%, #526c1b 0%, transparent 55%), linear-gradient(135deg, #172b13, #2d4818); }
+.contact::before { background: radial-gradient(ellipse at center, rgba(178,213,43,.12), transparent 69%); }
+.contact .eyebrow, .contact h2 span, .contact .contact-detail-icon, .contact .detail-arrow { color: #c2e44a; }
+.contact .eyebrow-dot { background: #b2d52b; box-shadow: 0 0 0 4px rgba(178,213,43,.18); }
+.contact .contact-copy > p:not(.eyebrow), .contact .contact-detail small, .contact .form-heading p, .contact .form-privacy { color: #d6e3c5; }
+.contact .contact-form { color: #fff; background: #29451e; border: 1px solid #627d43; }
+.contact .form-field input, .contact .form-field select, .contact .form-field textarea { color: #fff; background: #1b3215; border-color: #829c5f; }
+.contact .form-field input::placeholder, .contact .form-field textarea::placeholder, .contact .form-field select:invalid { color: #bdcdaa; }
+.contact .form-field input:focus, .contact .form-field select:focus, .contact .form-field textarea:focus { border-color: #c2e44a; box-shadow: 0 0 0 3px rgba(178,213,43,.2); }
+.contact .form-status, .contact .form-status a { color: #d4eb99; }
+:is(.services, .reviews, .about, .contact) .button-primary { color: #172b13; background: #c2e44a; box-shadow: 0 9px 23px rgba(0,0,0,.15); }
+:is(.services, .reviews, .about, .contact) .button-primary:hover { background: #d4ed7b; }
+.reviews .like-button[aria-pressed="true"] { color: #172b13; background: #c2e44a; border-color: #c2e44a; }
+.reviews .like-button[aria-pressed="true"] > span:first-child { color: #172b13; }
+.reviews .review-consent input { accent-color: #587523; }
+.reviews .like-button:focus-visible, .reviews .review-submit:focus-visible, .contact .button:focus-visible { outline: 3px solid #c2e44a; outline-offset: 3px; }
