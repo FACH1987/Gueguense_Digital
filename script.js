@@ -464,7 +464,7 @@ if (imageDialog && typeof imageDialog.showModal === 'function') {
   const main = document.querySelector('#contenido');
   if (!main) return;
   const sections = Array.from(main.children).filter(node => node.tagName === 'SECTION');
-  const titles = { inicio: 'Tu negocio merece presencia digital', servicios: 'Servicios', portafolio: 'Portafolio', 'reseñas': 'Reseñas', nosotros: 'Nosotros', contacto: 'Contacto', inspiracion: 'Ideas para tu negocio' };
+  const titles = { inicio: 'Tu negocio merece presencia digital', servicios: 'Servicios', proyectos: 'Proyectos', portafolio: 'Portafolio', 'reseñas': 'Reseñas', nosotros: 'Nosotros', contacto: 'Contacto', inspiracion: 'Ideas para tu negocio' };
   const routeFromHash = hash => { try { return decodeURIComponent(hash.slice(1)) || 'inicio'; } catch { return 'inicio'; } };
   const render = (focus = false) => {
     const requested = routeFromHash(location.hash);
