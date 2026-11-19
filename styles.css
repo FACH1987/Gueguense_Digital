@@ -755,6 +755,7 @@ body.image-preview-open { overflow: hidden; }
 .real-project-cover img { width: 100%; height: 100%; position: absolute; object-fit: cover; object-position: center; }
 .real-project-cover .project-screenshot { position: static; display: block; width: 100%; height: 100%; max-height: none; object-fit: cover; border-radius: 0; box-shadow: none; }
 .project-cover-inventario .project-screenshot { position: absolute; inset: 0; object-position: top center; }
+.project-cover-carrier .project-screenshot { position: absolute; inset: 0; object-position: top center; }
 .multigas-cover-crop { position: relative; width: 100%; aspect-ratio: 1024 / 1088; overflow: hidden; }
 .multigas-cover-crop .project-screenshot { position: absolute; inset: 0; object-fit: cover; object-position: top center; height: 141.177%; }
 .real-project-status { position: absolute; top: 20px; left: 20px; padding: 8px 14px; border-radius: 30px; background: #fff; color: #28431b; font-size: 11px; font-weight: 700; }
