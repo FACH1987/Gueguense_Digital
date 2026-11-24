@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gueguensedigital.com/sitemap.xml
+Sitemap: https://gueguensedigital.com/curso/sitemap.xml

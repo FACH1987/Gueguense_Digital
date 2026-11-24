@@ -473,7 +473,7 @@ if (imageDialog && typeof imageDialog.showModal === 'function') {
       section.hidden = !(route === 'inicio' ? section.classList.contains('hero') || section.classList.contains('closing') : section.id === route || (route === 'portafolio' && section.id === 'inspiracion'));
     });
     document.querySelectorAll('.site-nav a, .footer-column a').forEach(link => {
-      if (routeFromHash(link.hash) === route) link.setAttribute('aria-current', 'page');
+      if (link.hash && routeFromHash(link.hash) === route) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
     document.title = titles[route] + ' | Güegüense Digital';
